@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SWEAT ALERT LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Todoist</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center bg-[#f4f4f4] w-full h-screen px-4">
+  
+<div class="container mx-auto max-w-[500px] mt-16 px-6 py-[80px]  rounded-md shadow-2xl">
+
+    <h1 class="text-3xl  mb-4 text-left font-[600] text-3xl">Todoist</h1>
+
+    <div class="flex flex-col md:flex-row w-full mb-4 md:text-center gap-2">
+      <input type="text" id="todo-input" class="border-2 border-blue-500 flex justify-between flex-wrap w-[80%] border p-2 rounded-md focus:outline-none"
+        placeholder="Add new task">
+
+      <button class="bg-blue-500 w-max rounded-md py-2 px-3 text-white"
+        type="button" id="add-todo-Btn" onclick="addTodo()">Add Task</button>
+      <button class="hidden bg-blue-500 w-max rounded-md py-2 px-3 text-white"
+        type="button" id="update-todo-Btn" onclick="updateTodo()">Update Task</button>
+
+    </div>
+
+    <!-- display error prompt on the UI -->
+    <p id="error" class="text-center text-red-500 invisible"></p>
+
+    <!-- TodoList Container  -->
+    <section class="mt-5 " id="todoContainer"></section>
+    </section>
+  </div>
+    <script src="./app.js"></script>
+
+  </body>
+</html>
