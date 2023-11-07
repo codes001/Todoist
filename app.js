@@ -134,7 +134,7 @@ const updateTodo = (id) => {
   const updatedTodo = todoToUpdate.map((todo) => {
     if (todo.uuid === todo_id_to_update) {
       return { ...todo, title: todoInput.value };
-    } else {
+    } else { 
       return todo;
     }
   });
